@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U.E. Andes del Sol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #1d4ed8;
+      --navy: #0f2744;
+      --gold: #d4a017;
+      --bg: #f4f7fb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Source Sans 3", system-ui, sans-serif; background: var(--bg); color: #1c2a3a; }
+    img { width: 100%; display: block; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      position: sticky; top: 0; z-index: 20;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      padding: 14px 28px; background: #fff; border-bottom: 3px solid var(--gold);
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .badge {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #60a5fa, var(--navy));
+      color: #fff; display: grid; place-items: center; font-weight: 800;
+    }
+    .logo b { font-family: Fraunces, serif; font-size: 20px; color: var(--navy); }
+    .logo small { display: block; color: #5b6b7c; font-size: 12px; }
+    nav { margin-left: auto; display: flex; gap: 16px; font-weight: 700; }
+    nav a:hover { color: var(--blue); }
+
+    .hero {
+      display: grid; grid-template-columns: 1.1fr .9fr; min-height: 420px;
+      background: var(--navy); color: #fff;
+    }
+    .hero-text { padding: 56px 40px; }
+    .hero-text span { color: var(--gold); font-weight: 700; letter-spacing: 1.5px; font-size: 13px; }
+    .hero-text h1 { font-family: Fraunces, serif; font-size: clamp(32px, 5vw, 52px); margin: 10px 0 14px; }
+    .hero img { height: 100%; min-height: 320px; }
+
+    .datos {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+      padding: 22px 28px; margin-top: -28px; position: relative;
+    }
+    .dato { background: #fff; border-radius: 14px; padding: 14px; box-shadow: 0 10px 24px rgba(15,39,68,.08); }
+    .dato b { display: block; color: var(--blue); font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+
+    main { padding: 10px 28px 60px; }
+    h2 { font-family: Fraunces, serif; color: var(--navy); margin: 18px 0 12px; }
+    .grid5 { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 220px 220px; gap: 10px; }
+    .grid5 img { height: 100%; border-radius: 14px; }
+    .grid5 .big { grid-row: 1 / 3; }
+
+    .cols { display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px; margin-top: 28px; }
+    .card { background: #fff; border-radius: 16px; padding: 20px; }
+    ul { padding-left: 18px; line-height: 1.7; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #e5eaf0; }
+    footer { background: var(--navy); color: #dbe7f3; padding: 28px; }
+    footer b { color: #fff; }
+
+    @media (max-width: 900px) {
+      .hero, .cols, .datos, .grid5 { grid-template-columns: 1fr; }
+      .grid5 { grid-template-rows: none; }
+      .grid5 .big { grid-row: auto; height: 220px; }
+      .datos { margin-top: 12px; }
+      nav { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="badge">AS</div>
+      <div>
+        <b>U.E. Andes del Sol</b>
+        <small>Unidad Educativa Particular</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <span>FUNDADA EN 1998 · RÉGIMEN SIERRA</span>
+      <h1>Formamos estudiantes con carácter, ciencia y corazón.</h1>
+      <p>Inicial, Primaria y Secundaria en un campus seguro, con biblioteca, laboratorios y actividades deportivas.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" alt="Aulas de la unidad educativa" />
+  </section>
+
+  <section class="datos">
+    <div class="dato"><b>Código AMIE</b>17H01234</div>
+    <div class="dato"><b>Jornada</b>Matutina, 07:15 a 13:30</div>
+    <div class="dato"><b>Estudiantes</b>842 matriculados</div>
+    <div class="dato"><b>Docentes</b>54 profesores</div>
+    <div class="dato"><b>Año lectivo</b>2026 – 2027</div>
+  </section>
+
+  <main>
+    <h2 id="fotos">Cinco espacios de la U.E.</h2>
+    <div class="grid5">
+      <img class="big" src="foto1.jpeg" />
+      <img src="foto2.jpeg" />
+      <img src="foto3.jpeg" />
+      <img src="foto4.jpeg" />
+      <img src="foto5.jpeg" />
+    </div>
+
+    <div class="cols" id="oferta">
+      <article class="card">
+        <h2>Datos de la institución</h2>
+        <p>La Unidad Educativa Andes del Sol es particular, mixta y bilingüe básico (español–inglés). Trabaja con el currículo nacional y un programa de valores semanales.</p>
+        <ul>
+          <li>Niveles: Inicial 1 y 2, EGB y Bachillerato General Unificado.</li>
+          <li>Especialidades de BGU: Ciencias y Contabilidad.</li>
+          <li>Horario de secretaría: lunes a viernes, 08:00 a 16:00.</li>
+          <li>Uniforme: camisa blanca, suéter azul marino y zapato negro.</li>
+          <li>Transporte escolar opcional en 4 rutas del valle.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Matrícula 2026-2027</h2>
+        <table>
+          <tr><th>Nivel</th><th>Cupos</th><th>Pensión</th></tr>
+          <tr><td>Inicial</td><td>48</td><td>$95</td></tr>
+          <tr><td>Primaria</td><td>210</td><td>$110</td></tr>
+          <tr><td>Secundaria</td><td>180</td><td>$125</td></tr>
+        </table>
+        <p style="margin-top:12px">Documentos: partida de nacimiento, cédula del representante, certificado de promoción y 2 fotos.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer id="contacto">
+    <b>U.E. Andes del Sol</b>
+    <div>Av. Los Cedros N24-18 y Calle Sol, Quito</div>
+    <div>Teléfono: (02) 244-1988 · WhatsApp: 099 188 1998</div>
+    <div>Correo: secretaria@andesdelsol.edu.ec · Rectorado: rectorado@andesdelsol.edu.ec</div>
+  </footer>
+</body>
+</html>
